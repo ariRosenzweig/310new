@@ -25,6 +25,6 @@ def stream(first_name, last_name, state_name=None):
 
 @app.route('/')
 def default():
-    return "To acess the api use the path /api followed by a combination of the below parameters.<br/>https://example.com/api/search?first_name={firstName}&last_name={lastName}&location={location}&pid={pid}&custom_string={custom_string}<br/>Documentation and endpoint tester coming soon."
+    return "To acess the api use the path /api followed by a combination of the below parameters.<br/>https://example.com/api/{firstName}/{lastName}/{state}<br/>Documentation and endpoint tester coming soon."
 if __name__ == "__main__":
     app.run(debug=True)
