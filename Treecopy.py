@@ -1,6 +1,7 @@
 import requests, lxml, bs4, json, spacy 
 from bs4 import BeautifulSoup     
-nlp = spacy.load('en_core_web_sm') 
+import en_core_web_sm
+nlp = en_core_web_sm.load()
 class Proj: 
           def __init__(self):   
               self.url = None   
