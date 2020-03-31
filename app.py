@@ -1,6 +1,7 @@
 import flask
 from flask import jsonify
 from flask import Response
+from flask import current_app
 import Treecopy
 import json
 
@@ -25,6 +26,6 @@ def stream(first_name, last_name, state_name=None):
 
 @app.route('/')
 def default():
-    return "To acess the api use the path /api followed by a combination of the below parameters.<br/>https://example.com/api/{firstName}/{lastName}/{state}<br/>Documentation and endpoint tester coming soon."
+    return current_app.send_static_file('index.html')
 if __name__ == "__main__":
     app.run(debug=True)
